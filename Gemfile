@@ -2,7 +2,14 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.4'
-gem 'sqlite3'
+group :production do
+	gem'pg'
+end
+
+group :development do
+	gem'sqlite3'
+end
+
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form', '~> 3.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
